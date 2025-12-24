@@ -80,10 +80,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R  &kp T                                        &kp Y       &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F  &kp G      &kp LS(LG(S))      &kp MINUS      &kp H       &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B      &kp QUESTION       &kp DELETE     &kp N       &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &to 1  &kp SPACE  &kp TAB            &kp RIGHT_GUI  &kp RETURN                             &bt BT_CLR_ALL
+&kp Q             &kp W         &kp E         &kp R  &kp T                                                      &kp Y       &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F  &kp G                    &kp LS(LG(S))      &kp MINUS      &kp H       &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B                    &kp QUESTION       &kp BACKSPACE  &kp N       &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &to 1  &mt LC(RG(SPACE)) SPACE  &kp TAB            &kp RIGHT_GUI  &kp RETURN                             &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -93,8 +93,8 @@
             bindings = <
 &mt C_BRIGHTNESS_DEC F1  &mt F2 C_BRIGHTNESS_INC   &kp F3                &kp F4        &kp F5                                                    &mt F6 C_PREVIOUS  &mt F7 C_PLAY_PAUSE  &mt F8 C_NEXT   &mt F9 C_VOLUME_DOWN  &mt F10 C_VOLUME_UP
 &mt GRAVE TILDE          &mt NUMBER_1 EXCLAMATION  &mt NUMBER_2 AT_SIGN  &kp NUMBER_3  &kp NUMBER_4  &kp LC(LA(KP_NUMBER_0))      &kp NUMBER_5   &kp NUMBER_6       &kp NUMBER_7         &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0
-&kp TILDE                &kp EXCLAMATION           &kp AT_SIGN           &kp HASH      &kp DOLLAR    &kp QUESTION                 &kp DELETE     &kp CARET          &kp RIGHT_BRACKET    &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp NON_US_BACKSLASH
-&trans                   &trans                    &trans                &to 0         &kp SPACE     &kp TAB                      &kp RIGHT_GUI  &kp RETURN                                                                    &kp PIPE
+&kp TILDE                &kp EXCLAMATION           &kp AT_SIGN           &kp HASH      &kp DOLLAR    &kp QUESTION                 &kp BACKSPACE  &kp CARET          &kp RIGHT_BRACKET    &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp NON_US_BACKSLASH
+&kp RCTRL                &kp LEFT_ALT              &kp LEFT_GUI          &to 0         &kp SPACE     &kp TAB                      &kp RIGHT_GUI  &kp RETURN                                                                    &kp PIPE
             >;
         };
 
