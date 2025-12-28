@@ -112,7 +112,7 @@
 &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 7 SPACE  &kp LEFT_CONTROL      &kp RIGHT_GUI   &kp RETURN                             &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         FUNCTION {
