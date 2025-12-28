@@ -64,6 +64,18 @@
             bindings = <&kp LCTRL>;
             key-positions = <10 11>;
         };
+
+        p_tab {
+            bindings = <&kp LS(LG(LEFT_BRACKET))>;
+            key-positions = <18 19>;
+            layers = <4>;
+        };
+
+        n_tab {
+            bindings = <&kp LS(LG(RIGHT_BRACKET))>;
+            key-positions = <19 20>;
+            layers = <4>;
+        };
     };
 
     macros {
@@ -141,7 +153,7 @@
         SCROLL {
             bindings = <
 &trans     &trans  &trans  &trans  &trans                      &trans         &trans          &kp UP_ARROW    &trans           &trans
-&none      &trans  &trans  &trans  &trans  &trans      &trans  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans     &trans  &trans  &trans  &trans  &trans      &trans  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &kp LSHFT  &trans  &trans  &trans  &trans  &trans      &trans  &trans         &trans          &trans          &trans           &msc MOVE_Y(5)
 &trans     &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                          &msc MOVE_X(5)
             >;
