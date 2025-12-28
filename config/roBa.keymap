@@ -136,10 +136,10 @@
 
         MOUSE {
             bindings = <
-&kp ESCAPE      &trans             &trans        &trans         &trans                             &kp LC(LEFT_ARROW)  &kp LG(LS(LEFT_BRACKET))  &kp LC(UP_ARROW)        &kp LG(LS(RIGHT_BRACKET))  &kp LC(RIGHT_ARROW)
-&trans          &kp LC(RG(SPACE))  &kp LC(D)     &trans         &trans  &trans      &trans         &kp LC(LEFT_ARROW)  &mkp MB1                  &trans                  &mkp MB2                   &kp LC(RIGHT_ARROW)
-&kp LEFT_SHIFT  &trans             &trans        &kp LC(LG(V))  &trans  &trans      &trans         &trans              &kp LG(LA(LEFT_ARROW))    &kp LA(LG(DOWN_ARROW))  &kp LA(LG(RIGHT_ARROW))    &trans
-&mo 8           &trans             &kp LEFT_GUI  &trans         &trans  &trans      &kp RIGHT_GUI  &lt 6 RIGHT_GUI                                                                                  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &mo 8   &trans      &trans  &mo 8                           &trans
             >;
         };
 
@@ -172,10 +172,10 @@
 
         layer_8 {
             bindings = <
-&trans  &trans            &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(UP_ARROW)  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans             &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
+&trans  &kp RG(LC(SPACE))  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
+&trans  &trans             &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &trans             &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
 
