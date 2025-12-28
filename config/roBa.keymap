@@ -89,6 +89,11 @@
             bindings = <&kp LC(RIGHT_ARROW)>;
             key-positions = <20 21>;
         };
+
+        command-alt {
+            bindings = <&mo 9>;
+            key-positions = <35 36>;
+        };
     };
 
     macros {
