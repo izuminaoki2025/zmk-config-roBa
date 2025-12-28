@@ -186,7 +186,7 @@
             >;
         };
 
-        layer_7 {
+        number_pad {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_9  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans        &trans
@@ -204,22 +204,15 @@
             >;
         };
 
-        layer_9 {
+        command_option {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB1  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                        &trans  &trans                  &kp LG(LA(UP_ARROW))    &trans                   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans  &kp LG(LA(LEFT_ARROW))  &kp LG(LA(DOWN_ARROW))  &kp LG(LA(RIGHT_ARROW))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans  &trans                  &trans                  &trans                   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB1  &trans                                                                           &trans
             >;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        test {
-            if-layers = <4 8>;
-            then-layer = <9>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
