@@ -68,19 +68,16 @@
         p_tab {
             bindings = <&kp LS(LG(LEFT_BRACKET))>;
             key-positions = <18 19>;
-            layers = <4>;
         };
 
         n_tab {
             bindings = <&kp LS(LG(RIGHT_BRACKET))>;
             key-positions = <19 20>;
-            layers = <4>;
         };
 
         mission_control {
             bindings = <&kp UP_ARROW>;
             key-positions = <18 19 20>;
-            layers = <4>;
         };
     };
 
