@@ -76,6 +76,12 @@
             key-positions = <19 20>;
             layers = <4>;
         };
+
+        mission_control {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <18 19 20>;
+            layers = <4>;
+        };
     };
 
     macros {
