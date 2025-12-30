@@ -130,7 +130,7 @@
 &mt NUMBER_1 NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT NUMBER_5                      &mt CARET NUMBER_6  &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0
 &trans                 &trans                &trans             &trans               &trans                &trans      &trans  &trans              &trans                  &trans                 &trans                         &trans
 &trans                 &trans                &trans             &trans               &trans                &trans      &trans  &trans              &trans                  &trans                 &trans                         &trans
-&trans                 &trans                &trans             &trans               &mo 5                 &trans      &trans  &mo 4                                                                                             &trans
+&trans                 &trans                &trans             &trans               &trans                &trans      &mo 5   &mo 4                                                                                             &trans
             >;
         };
 
