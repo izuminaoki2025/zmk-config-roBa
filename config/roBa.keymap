@@ -122,7 +122,7 @@
 &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 COMMA          &mt RIGHT_GUI PERIOD  &mt QUESTION RETURN                             &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP C_VOLUME_DOWN>;
         };
 
         NUMBERS {
