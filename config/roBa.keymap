@@ -81,12 +81,12 @@
         };
 
         command-option_left {
-            bindings = <&mo 3>;
+            bindings = <&mo 8>;
             key-positions = <38 39>;
         };
 
         command_option_right {
-            bindings = <&mo 3>;
+            bindings = <&mo 8>;
             key-positions = <40 41>;
         };
     };
@@ -116,10 +116,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W      &kp E         &kp R         &kp T                                                           &kp Y                &kp U  &kp I      &kp O    &kp P
-&lt 5 A         &kp S      &kp D         &kp F         &kp G        &kp LS(LC(LG(K_POWER)))      &kp F10               &kp H                &kp J  &kp K      &kp L    &kp MINUS
-&kp Z           &kp X      &kp C         &kp V         &kp B        &kp EXCLAMATION              &kp F7                &kp N                &kp M  &kp COMMA  &kp DOT  &kp QUESTION
-&kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 COMMA                  &mt RIGHT_GUI PERIOD  &mt QUESTION RETURN                             &kp LG(LS(NUMBER_4))
+&kp Q           &kp W      &kp E         &kp R         &kp T                                                    &kp Y                &kp U  &kp I      &kp O    &kp P
+&lt 3 A         &kp S      &kp D         &kp F         &kp G        &kp C_PLAY_PAUSE      &kp F10               &kp H                &kp J  &kp K      &kp L    &kp MINUS
+&kp Z           &kp X      &kp C         &kp V         &kp B        &kp EXCLAMATION       &kp F7                &kp N                &kp M  &kp COMMA  &kp DOT  &kp QUESTION
+&kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 COMMA           &mt RIGHT_GUI PERIOD  &mt QUESTION RETURN                             &kp LG(LS(NUMBER_4))
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
