@@ -16,20 +16,21 @@
 / {
     /* --- Behaviors セクション --- */
     behaviors {
+        /* エンコーダー低速化設定 */
+        /* steps = <72>; は roBaで1クリック(1入力)にするための推奨値です */
+        inc_dec_slow: inc_dec_slow {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp>, <&kp>;
+            steps = <72>; 
+        };
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-
-        /* 1クリック1入力にするための設定 */
-        inc_dec_slow: inc_dec_slow {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp>, <&kp>;
-            resolution = <4>; 
         };
     };
 
@@ -46,7 +47,6 @@
     /* --- Combos セクション --- */
     combos {
         compatible = "zmk,combos";
-
         tab { bindings = <&kp TAB>; key-positions = <11 12>; };
         shift_tab { bindings = <&kp LS(TAB)>; key-positions = <12 13>; };
         escape { bindings = <&kp ESCAPE>; key-positions = <0 1>; layers = <0>; };
