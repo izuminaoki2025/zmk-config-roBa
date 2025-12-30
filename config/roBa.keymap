@@ -130,7 +130,7 @@
 &mt NUMBER_1 NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT NUMBER_5                      &mt CARET NUMBER_6  &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0
 &trans                 &trans                &trans             &trans               &trans                &trans      &trans  &trans              &trans                  &trans                 &trans                         &trans
 &trans                 &trans                &trans             &trans               &trans                &trans      &trans  &trans              &trans                  &trans                 &trans                         &trans
-&trans                 &trans                &trans             &trans               &trans                &trans      &mo 7   &mo 6                                                                                             &trans
+&trans                 &trans                &trans             &trans               &trans                &trans      &mo 6   &mo 7                                                                                             &trans
             >;
         };
 
@@ -150,6 +150,8 @@
 &trans  &trans          &trans  &trans  &trans  &trans      &trans  &trans         &trans          &trans          &trans           &trans
 &trans  &trans          &trans  &trans  &trans  &trans      &trans  &trans                                                          &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         MOUSE {
@@ -177,7 +179,7 @@
 &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
 &kp F11  &kp F12  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans   &trans   &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&mo 7    &trans   &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans   &trans   &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
