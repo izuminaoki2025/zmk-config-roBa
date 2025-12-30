@@ -18,11 +18,12 @@
     behaviors {
         /* エンコーダー設定 */
         inc_dec_slow: inc_dec_slow {
-            compatible = "zmk,behavior-sensor-rotate";
-            /* 重要: キーマップ側で2つのキー(UP/DOWN)を指定するため、cellsは2にする必要があります */
+            /* 修正点: ここを generic ではなく key-press 専用タイプに変更 */
+            compatible = "zmk,behavior-sensor-rotate-key-press";
+            /* これにより引数2個が許可されます */
             #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            /* 回転速度を落とすための待機時間 */
+            /* 速度制限 (20ms) */
             tap-ms = <20>;
         };
 
