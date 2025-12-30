@@ -17,12 +17,14 @@
     /* --- Behaviors セクション --- */
     behaviors {
         /* エンコーダー低速化設定 */
-        /* steps = <72>; は roBaで1クリック(1入力)にするための推奨値です */
+        /* triggers-per-rotation を使用して感度を調整します */
         inc_dec_slow: inc_dec_slow {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&kp>, <&kp>;
-            steps = <72>; 
+            // 数値を大きくするほど1回転あたりの入力回数が減り、ゆっくりになります
+            // 多くのエンコーダーでは 72 前後が 1クリック=1入力 になりやすいです
+            triggers-per-rotation = <72>; 
         };
 
         lt_to_layer_0: lt_to_layer_0 {
@@ -96,7 +98,7 @@
         ARROW {
             bindings = <
 &trans  &trans          &trans  &trans  &trans                      &trans         &trans          &kp UP_ARROW    &trans           &trans
-&trans  &kp LEFT_SHIFT  &trans  &trans  &trans  &trans      &trans  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &kp LEFT_SHIFT  &trans  &trans  &trackball_arrows  &trans      &trans  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &trans  &trans          &trans  &trans  &trans  &trans      &trans  &trans         &trans          &trans          &trans           &trans
 &trans  &trans          &trans  &trans  &trans  &trans      &trans  &trans                                                          &trans
             >;
