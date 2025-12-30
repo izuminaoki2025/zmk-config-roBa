@@ -11,32 +11,86 @@
 &trackball {
     automouse-layer = <4>;
     scroll-layers = <5>;
+
+    // arrows {
+    //     layers = <3>;
+    //     bindings =
+    //         <&kp RIGHT_ARROW>,
+    //         <&kp LEFT_ARROW>,
+    //         <&kp UP_ARROW>,
+    //         <&kp DOWN_ARROW>;
+    //     tick = <10>;
+    //     wait-ms = <5>;
+    //     tap-ms = <5>;
+    // };
 };
 
 / {
-    /* --- Behaviors セクション --- */
-    behaviors {
-        /* エンコーダー設定 */
-        inc_dec_slow: inc_dec_slow {
-            /* 修正点: ここを generic ではなく key-press 専用タイプに変更 */
-            compatible = "zmk,behavior-sensor-rotate-key-press";
-            /* これにより引数2個が許可されます */
-            #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-            /* 速度制限 (20ms) */
-            tap-ms = <20>;
+    combos {
+        compatible = "zmk,combos";
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <11 12>;
         };
 
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
+        shift_tab {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <12 13>;
+        };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
+            layers = <0>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
+
+        p_tab {
+            bindings = <&kp LS(LG(LEFT_BRACKET))>;
+            key-positions = <18 19>;
+        };
+
+        n_tab {
+            bindings = <&kp LS(LG(RIGHT_BRACKET))>;
+            key-positions = <19 20>;
+        };
+
+        mission_control {
+            bindings = <&kp LC(UP_ARROW)>;
+            key-positions = <18 20>;
+        };
+
+        spotlight {
+            bindings = <&kp RG(LC(SPACE))>;
+            key-positions = <11 13>;
+        };
+
+        mission_left {
+            bindings = <&kp LC(LEFT_ARROW)>;
+            key-positions = <17 18>;
+        };
+
+        mission_r {
+            bindings = <&kp LC(RIGHT_ARROW)>;
+            key-positions = <20 21>;
+        };
+
+        command-option_left {
+            bindings = <&mo 8>;
+            key-positions = <38 39>;
+        };
+
+        command_option_right {
+            bindings = <&mo 8>;
+            key-positions = <40 41>;
         };
     };
 
-    /* --- Macros セクション --- */
     macros {
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
@@ -46,24 +100,17 @@
         };
     };
 
-    /* --- Combos セクション --- */
-    combos {
-        compatible = "zmk,combos";
-        tab { bindings = <&kp TAB>; key-positions = <11 12>; };
-        shift_tab { bindings = <&kp LS(TAB)>; key-positions = <12 13>; };
-        escape { bindings = <&kp ESCAPE>; key-positions = <0 1>; layers = <0>; };
-        backspace { bindings = <&kp BACKSPACE>; key-positions = <8 9>; };
-        p_tab { bindings = <&kp LS(LG(LEFT_BRACKET))>; key-positions = <18 19>; };
-        n_tab { bindings = <&kp LS(LG(RIGHT_BRACKET))>; key-positions = <19 20>; };
-        mission_control { bindings = <&kp LC(UP_ARROW)>; key-positions = <18 20>; };
-        spotlight { bindings = <&kp RG(LC(SPACE))>; key-positions = <11 13>; };
-        mission_left { bindings = <&kp LC(LEFT_ARROW)>; key-positions = <17 18>; };
-        mission_r { bindings = <&kp LC(RIGHT_ARROW)>; key-positions = <20 21>; };
-        command_option_left { bindings = <&mo 8>; key-positions = <38 39>; };
-        command_option_right { bindings = <&mo 8>; key-positions = <40 41>; };
+    behaviors {
+        lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
-    /* --- Keymap セクション --- */
     keymap {
         compatible = "zmk,keymap";
 
@@ -74,7 +121,8 @@
 &kp Z           &kp X      &kp C         &kp V         &kp B        &kp EXCLAMATION       &kp F7                &kp N                &kp M  &kp COMMA  &kp DOT  &kp QUESTION
 &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 COMMA           &mt RIGHT_GUI PERIOD  &mt QUESTION RETURN                             &kp LG(LS(NUMBER_4))
             >;
-            sensor-bindings = <&inc_dec_slow C_VOL_UP C_VOL_DN>;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         NUMBERS {
@@ -102,7 +150,8 @@
 &trans  &trans          &trans  &trans  &trans  &trans      &trans  &trans         &trans          &trans          &trans           &trans
 &trans  &trans          &trans  &trans  &trans  &trans      &trans  &trans                                                          &trans
             >;
-            sensor-bindings = <&inc_dec_slow UP_ARROW DOWN_ARROW>;
+
+            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         MOUSE {
@@ -112,7 +161,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans    &mo 5   &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans                              &trans
             >;
-            sensor-bindings = <&inc_dec_slow LG(LS(EQUAL)) LG(LS(MINUS))>;
+
+            sensor-bindings = <&inc_dec_kp LG(LS(EQUAL)) LG(LS(MINUS))>;
         };
 
         SCROLL {
@@ -122,7 +172,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans  &msc MOVE_Y(5)
 &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans                          &msc MOVE_X(5)
             >;
-            sensor-bindings = <&inc_dec_slow LG(LS(EQUAL)) LG(LS(MINUS))>;
+
+            sensor-bindings = <&inc_dec_kp LG(LS(EQUAL)) LG(LS(MINUS))>;
         };
 
         FUNCTIONS {
@@ -153,7 +204,5 @@
         };
     };
 
-    conditional_layers { 
-        compatible = "zmk,conditional-layers"; 
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
