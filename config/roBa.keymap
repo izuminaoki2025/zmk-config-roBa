@@ -19,13 +19,10 @@
         /* エンコーダー設定 */
         inc_dec_slow: inc_dec_slow {
             compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
+            /* 重要: キーマップ側で2つのキー(UP/DOWN)を指定するため、cellsは2にする必要があります */
+            #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            /* エラー原因の triggers-per-rotation を削除しました。
-               代わりに tap-ms を使用します。
-               これにより、20ms未満の連続入力が無視され、結果的に動作がゆっくりになります。
-               まだ速すぎる場合はこの数値を <30> や <50> に増やしてください。
-            */
+            /* 回転速度を落とすための待機時間 */
             tap-ms = <20>;
         };
 
