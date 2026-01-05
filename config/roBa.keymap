@@ -67,7 +67,7 @@
 
         spotlight {
             bindings = <&kp RG(LC(SPACE))>;
-            key-positions = <11 13>;
+            key-positions = <10 38 40>;
         };
 
         mission_left {
