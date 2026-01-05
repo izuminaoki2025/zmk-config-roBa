@@ -131,10 +131,10 @@
 
         SYMBOLS {
             bindings = <
-&kp GRAVE  &trans  &trans  &trans  &trans                      &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
-&trans     &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans     &trans            &kp SEMICOLON      &kp SQT
-&trans     &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans     &kp COMMA         &kp PERIOD         &kp SLASH
-&trans     &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                     &trans
+&kp GRAVE  &trans  &trans  &trans  &trans                      &kp MINUS      &kp EQUAL  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH
+&trans     &trans  &trans  &trans  &trans  &trans      &trans  &kp SEMICOLON  &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
+&trans     &trans  &trans  &trans  &trans  &trans      &trans  &kp SEMICOLON  &trans     &kp LESS_THAN         &kp GREATER_THAN       &kp SLASH
+&trans     &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                 &trans
             >;
         };
 
