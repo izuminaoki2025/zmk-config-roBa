@@ -89,6 +89,11 @@
             bindings = <&kp LA(LC(LG(B)))>;
             key-positions = <30 32>;
         };
+
+        spotlight {
+            bindings = <&kp LC(RG(SPACE))>;
+            key-positions = <30 19>;
+        };
     };
 
     macros {
