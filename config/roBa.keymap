@@ -86,8 +86,8 @@
         };
 
         launchpad {
-            bindings = <&kp F4>;
-            key-positions = <32 30>;
+            bindings = <&kp LA(LC(LG(B)))>;
+            key-positions = <30 32>;
         };
     };
 
