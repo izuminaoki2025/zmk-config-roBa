@@ -84,6 +84,11 @@
             bindings = <&mo 8>;
             key-positions = <40 41>;
         };
+
+        launchpad {
+            bindings = <&kp F4>;
+            key-positions = <32 30>;
+        };
     };
 
     macros {
